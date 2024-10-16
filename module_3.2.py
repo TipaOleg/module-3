@@ -20,7 +20,7 @@ def check_mail(recipient, sender):
         count = 0
         for i in check_list:
             string = recipient + sender
-            c =string.count(i)
+            c = string.count(i)
             count += c
         if count == 2:
             return True
