@@ -1,5 +1,4 @@
 
-check_list = ['.com', '.ru', '.net']
 
 def send_email(mail, recipient, sender='university.help@gmail.com'):
     check = check_mail(recipient, sender)
@@ -17,15 +16,16 @@ def send_email(mail, recipient, sender='university.help@gmail.com'):
 def check_mail(recipient, sender):
     check_list = ['.com', '.ru', '.net']
     if '@' in recipient and '@' in sender:
-        count = 0
-        for i in check_list:
-            string = recipient + sender
-            c = string.count(i)
-            count += c
-        if count == 2:
-            return True
-        else:
-            return False
+        fl = False
+        for dom in check_list:
+            if recipient.endswith(dom) and sender.endswith(dom):
+                fl = True
+                break
+
+        return fl
+
+    return False
+
 
 
 
