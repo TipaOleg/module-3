@@ -46,4 +46,4 @@ data_structure = [
 what_element(data_structure)
 
 
-print("Общая сумма:", total_sum + total_length)
+print(total_sum + total_length)
